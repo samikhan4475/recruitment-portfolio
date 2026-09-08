@@ -1,6 +1,7 @@
 'use client'
 
-import { Button, Flex, Link, Text } from '@radix-ui/themes'
+import { Button, Flex, Text } from '@radix-ui/themes'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const NavLinks = [
@@ -30,10 +31,12 @@ const NavbarSection = () => {
   const pathname = usePathname()
 
   return (
-    <Flex justify="between">
-      <Text className="text-xl font-bold text-[#1e2761]">
-        Freelance Recruitment Specialist
-      </Text>
+    <Flex justify="between" className="my-5">
+      <Link href="/" className="no-underline">
+        <Text className="text-xl font-bold text-[#1e2761]">
+          Freelance Recruitment Specialist
+        </Text>
+      </Link>
 
       <Flex gap="7" align="center">
         <Flex className="gap-6">
