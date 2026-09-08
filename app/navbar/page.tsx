@@ -2,6 +2,7 @@
 
 import { Button, Flex, Link, Text } from '@radix-ui/themes'
 import { usePathname } from 'next/navigation'
+
 const NavLinks = [
   {
     title: 'Home',
@@ -24,6 +25,7 @@ const NavLinks = [
     href: '/contact',
   },
 ]
+
 const NavbarSection = () => {
   const pathname = usePathname()
 
@@ -57,4 +59,5 @@ const NavbarSection = () => {
     </Flex>
   )
 }
-export {NavbarSection}
+
+export default NavbarSection
