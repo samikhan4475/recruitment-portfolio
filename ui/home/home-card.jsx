@@ -3,7 +3,13 @@ import { Flex, Grid, Text } from '@radix-ui/themes'
 
 const HomeCard = () => {
     return (
-       <Grid columns="4" gap="6">
+       <Grid columns={{
+		initial: "1",
+        xs:'2',
+        sm:'2',
+		md: "3",
+		lg: "4",
+	}} gap="6">
             {HomeData.map((homeData, index) => {
                 const isImage = homeData.icon.startsWith('http')
 

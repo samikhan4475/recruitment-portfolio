@@ -5,7 +5,7 @@ import { Flex } from '@radix-ui/themes'
 
 const Home = () => {
   return (
-    <Flex gap='4' direction='column' mb='6'>
+    <Flex gap='4' direction='column' my='6'>
       <MainHomeSection/>
       <HomeCard/>
     </Flex>
