@@ -4,7 +4,7 @@ import InputField from '../../app/text-field'
 
 const ContactForm = () => {
     return (
-        <Flex direction='column' gap='3' className='w-[60%]'>
+        <Flex direction='column' gap='3' className='md:w-[60%] sm:w-full'>
             <InputField label='Full Name' />
             <InputField label='Email Address' />
             <InputField label='Company (optional)' />

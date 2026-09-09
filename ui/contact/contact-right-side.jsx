@@ -7,7 +7,7 @@ const ContactRightSide = () => {
     return (
 
 
-        <Flex direction='column' gap='9' className='bg-[#1E2761] w-[40%] p-7 rounded-xl'>
+        <Flex direction='column' gap='9' className='bg-[#1E2761]  md:w-[40%] sm:w-full p-7 rounded-xl'>
             <Flex direction='column' gap='5'>
                 {contactData.map((item, index) => {
                     const Icon = item.icon;
@@ -37,9 +37,9 @@ const ContactRightSide = () => {
             </Flex>
 
             <Flex gap='2'>
-                <Button className='h-12! text-sm bg-white! text-[#1E2761]! rounded-lg! w-[50%]!'>
+                <Button className='h-12! sm:text-sm max-sm:text-[12px]! bg-white! text-[#1E2761]! rounded-lg! w-[50%]!'>
                   <Mail/>  Email Me</Button>
-                <Button className='h-12! text-sm bg-white! text-[#1E2761]! rounded-lg! w-[50%]!'><MessageCircle/> WhatsApp Me</Button>
+                <Button className='h-12! sm:text-sm max-sm:text-[12px]! bg-white! text-[#1E2761]! rounded-lg! w-[50%]!'><MessageCircle/> WhatsApp Me</Button>
 
             </Flex>
         </Flex>
