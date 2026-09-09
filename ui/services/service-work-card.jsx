@@ -3,7 +3,13 @@ import { ServicesWorksData } from './service-work-data'
 
 const ServiceWorkCard = () => {
     return (
-        <Grid columns="4" gap="6">
+        <Grid columns={{
+        initial: "1",
+        xs: '2',
+        sm: '3',
+        md: "4",
+        lg: "4",
+      }} gap="6">
             {ServicesWorksData.map((servicesWork, index) => {
                 const isImage = servicesWork.icon
                 return (

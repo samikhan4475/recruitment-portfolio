@@ -4,7 +4,13 @@ import { Flex, Grid, Text } from '@radix-ui/themes'
 
 const ServiceOfferCard = () => {
     return (
-        <Grid columns="4" gap="6">
+        <Grid columns={{
+        initial: "1",
+        xs: '2',
+        sm: '3',
+        md: "4",
+        lg: "4",
+      }} gap="6">
             {servicesOfferData.map((servicesOffer, index) => {
                 const isImage = servicesOffer.icon.startsWith('http')
 
