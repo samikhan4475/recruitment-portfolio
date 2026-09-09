@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Theme } from "@radix-ui/themes";
+import { Box, Theme } from "@radix-ui/themes";
 import NavbarSection from "./navbar/page";
 
 const geistSans = Geist({
@@ -27,8 +27,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col px-6">
        <Theme>
+         <Box className='max-w-360 m-auto '>
         <NavbarSection/>
           {children}
+        </Box>
         </Theme>
       </body>
     </html>

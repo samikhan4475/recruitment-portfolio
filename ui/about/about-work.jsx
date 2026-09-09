@@ -11,7 +11,13 @@ const AboutWork = () => {
                 Why Work With Me
             </Text>
 
-            <Grid columns="3" gap="6">
+            <Grid columns={{
+                initial: "1",
+                xs: '2',
+                sm: '2',
+                md: "3",
+                lg: "3",
+            }} gap="6">
                 {AboutWorkData.map((aboutWork, index) => {
                     const isImage = aboutWork.icon.startsWith('http')
 
@@ -20,7 +26,7 @@ const AboutWork = () => {
                             key={index}
                             gap="5"
                             direction="column"
-                            className=" p-7"
+                            className="lg:p-7 md:p-7 md:py-5  sm:p-7 max-sm:px-0 max-sm:py-4"
                         >
                             <Flex align="center" gap="4">
                                 <Flex
