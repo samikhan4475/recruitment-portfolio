@@ -21,7 +21,7 @@ const MainHomeSection = () => {
         sm:'6',
 		md: "7",
 		lg: "7",}} >
-                <Text className='lg:text-[40px] md:text-[30px] max-sm:text-[35px] text-[#1e2761] w-[60%]! xl:w-[45%]! lg:w-[70%]! md:w-full! sm:w-full! max-sm:w-full!  font-bold '>
+                <Text className='lg:text-[40px]! md:text-[30px]! sm:text-[35px]! max-sm:text-[35px]! text-[#1e2761] w-[60%]! xl:w-[45%]! lg:w-[70%]! md:w-full! sm:w-full! max-sm:w-full! font-bold '>
                     Connecting World-Class Talent with Global Opportunities
                 </Text>
                 <Text className='lg:text-[18.6667px] md:text-[16.6667px] text-[#6b7280] lg:w-[45%]! md:w-[64%]! sm:w-full! max-sm:w-full!'>
