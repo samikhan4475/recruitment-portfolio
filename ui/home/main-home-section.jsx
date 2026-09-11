@@ -50,7 +50,7 @@ const MainHomeSection = () => {
 
 
 
-            <Flex align='center' justify='center' className='bg-[#cadcfc]! h-68.25! p-10 rounded-lg md:w-[35%] sm:w-full max-sm:w-full!'   >
+            <Flex align='center' justify='center'  className='bg-[#cadcfc]! text-center! h-68.25! p-10 rounded-lg md:w-[35%] sm:w-full max-sm:w-full!'   >
                 <Flex gap='6' direction='column' align='center'>
                    
                     <Users width='86px' height='86px' color='#1e2761' />

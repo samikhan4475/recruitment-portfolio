@@ -4,7 +4,7 @@ import { Users } from 'lucide-react'
 const AboutSection = () => {
     return (
         <Flex align='center' gap='6' className='md:flex-row sm:flex-col max-sm:flex-col'>
-            <Flex align='center' justify='center' className='bg-[#cadcfc]! p-14 rounded-lg  lg:w-[25%] md:w-[25%] sm:w-full max-sm:w-full'>
+            <Flex align='center' justify='center' className='bg-[#cadcfc]! text-center! p-14 rounded-lg  lg:w-[25%] md:w-[25%] sm:w-full max-sm:w-full'>
                 <Flex gap='3' direction='column' align='center'>
                     <Users width='86px' height='86px' color='#1e2761' />
                     <Text className='text-sm font-bold text-[#1e2761]'>YOUR PHOTO HERE</Text>
