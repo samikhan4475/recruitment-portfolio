@@ -19,7 +19,7 @@ const AboutWork = () => {
                 lg: "3",
             }} gap="6">
                 {AboutWorkData.map((aboutWork, index) => {
-                    const isImage = aboutWork.icon.startsWith('http')
+                      const Icon = aboutWork.icon;
 
                     return (
                         <Flex
@@ -34,15 +34,8 @@ const AboutWork = () => {
                                     justify="center"
                                     className="h-12 w-12 shrink-0 rounded-full bg-[#1e2761] text-white"
                                 >
-                                    {isImage ? (
-                                        <img
-                                            src={aboutWork.icon}
-                                            alt={aboutWork.title}
-                                            className="h-6 w-6 object-contain"
-                                        />
-                                    ) : (
-                                        <span>{aboutWork.icon}</span>
-                                    )}
+                                    <Icon/>
+                                   
                                 </Flex>
                                 <Flex direction='column' gap='3'>
                                     <Text className="text-[#1e2761] text-[15.3333px] font-bold">

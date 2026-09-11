@@ -12,7 +12,7 @@ const ServiceOfferCard = () => {
         lg: "4",
       }} gap="6">
             {servicesOfferData.map((servicesOffer, index) => {
-                const isImage = servicesOffer.icon.startsWith('http')
+                const Icon = servicesOffer.icon
 
                 return (
                     <Flex
@@ -27,15 +27,7 @@ const ServiceOfferCard = () => {
                                 justify="center"
                                 className="h-12 w-12 shrink-0 rounded-full bg-[#1e2761] text-white"
                             >
-                                {isImage ? (
-                                    <img
-                                        src={servicesOffer.icon}
-                                        alt={servicesOffer.title}
-                                        className="h-6 w-6 object-contain"
-                                    />
-                                ) : (
-                                    <span>{servicesOffer.icon}</span>
-                                )}
+                               <Icon/>
                             </Flex>
 
 

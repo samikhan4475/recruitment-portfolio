@@ -11,7 +11,7 @@ const HomeCard = () => {
 		lg: "4",
 	}} gap="6">
             {HomeData.map((homeData, index) => {
-                const isImage = homeData.icon.startsWith('http')
+                const Icon = homeData.icon
 
                 return (
                     <Flex
@@ -26,15 +26,7 @@ const HomeCard = () => {
                                 justify="center"
                                 className="h-12 w-12 shrink-0 rounded-full bg-[#1e2761] text-white"
                             >
-                                {isImage ? (
-                                    <img
-                                        src={homeData.icon}
-                                        alt={homeData.title}
-                                        className="h-6.25 w-6.25 object-contain"
-                                    />
-                                ) : (
-                                    <span>{homeData.icon}</span>
-                                )}
+                          <Icon/>
                             </Flex>
 
 

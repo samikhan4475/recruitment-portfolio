@@ -1,47 +1,43 @@
-'use client'
+"use client";
 
-import { Button, Flex, Text } from '@radix-ui/themes'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { Button, Flex, Text } from "@radix-ui/themes";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const NavLinks = [
-  {
-    title: 'Home',
-    href: '/home',
-  },
-  {
-    title: 'About',
-    href: '/about',
-  },
-  {
-    title: 'Services',
-    href: '/services',
-  },
-  {
-    title: 'Industries',
-    href: '/industries',
-  },
-  {
-    title: 'Contact',
-    href: '/contact',
-  },
-]
+  { title: "Home", href: "/home" },
+  { title: "About", href: "/about" },
+  { title: "Services", href: "/services" },
+  { title: "Industries", href: "/industries" },
+  { title: "Contact", href: "/contact" },
+];
 
 const NavbarSection = () => {
-  const pathname = usePathname()
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <Flex
       direction="column"
-      className="my-5 w-full"
+      className="
+        fixed
+        top-0
+        left-0
+        z-50
+        w-full
+        bg-white
+        shadow-sm
+        transition-all
+        duration-300
+        ease-in-out
+      "
     >
-      {/* Navbar Header */}
+      {/* 1440px Navbar Content */}
       <Flex
         justify="between"
         align="center"
-        className="w-full"
+        className="w-full max-w-360 mx-auto px-6 py-5"
       >
         {/* Logo */}
         <Link href="/" className="no-underline">
@@ -52,19 +48,19 @@ const NavbarSection = () => {
 
         {/* Desktop Menu */}
         <Flex
-          gap="7"
+          gap="9"
           align="center"
           className="hidden! md:flex!"
         >
-          <Flex className="gap-6">
+          <Flex className="gap-14">
             {NavLinks.map((link) => (
               <Link
                 key={link.title}
                 href={link.href}
-                className={`text-[14px] ${
+                className={`text-[12px] transition-colors duration-300 ${
                   pathname === link.href
-                    ? 'text-black'
-                    : 'text-gray-500'
+                    ? "text-black"
+                    : "text-gray-500 hover:text-[#1E2761]"
                 }`}
               >
                 {link.title}
@@ -72,7 +68,7 @@ const NavbarSection = () => {
             ))}
           </Flex>
 
-          <Button className="bg-[#1E2761]! text-white!">
+          <Button className="bg-[#1E2761]! text-white! h-8 transition-all duration-300 hover:opacity-90">
             Hire Me
           </Button>
         </Flex>
@@ -83,7 +79,7 @@ const NavbarSection = () => {
           className="flex! md:hidden!"
           onClick={() => setIsMenuOpen((prev) => !prev)}
         >
-          {isMenuOpen ? '✕' : '☰'}
+          {isMenuOpen ? "✕" : "☰"}
         </Button>
       </Flex>
 
@@ -91,17 +87,27 @@ const NavbarSection = () => {
       {isMenuOpen && (
         <Flex
           direction="column"
-          className="flex! mt-4 gap-4 border-t pt-4 md:hidden!"
+          className="
+            w-full
+            max-w-[1440px]
+            mx-auto
+            px-6
+            pb-5
+            gap-4
+            border-t
+            pt-4
+            md:hidden!
+          "
         >
           {NavLinks.map((link) => (
             <Link
               key={link.title}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className={`text-[14px] ${
+              className={`text-[14px] transition-colors duration-300 ${
                 pathname === link.href
-                  ? 'font-semibold text-black'
-                  : 'text-gray-500'
+                  ? "font-semibold text-black"
+                  : "text-gray-500 hover:text-[#1E2761]"
               }`}
             >
               {link.title}
@@ -114,7 +120,7 @@ const NavbarSection = () => {
         </Flex>
       )}
     </Flex>
-  )
-}
+  );
+};
 
-export default NavbarSection
+export default NavbarSection;

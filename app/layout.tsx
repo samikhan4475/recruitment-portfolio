@@ -16,24 +16,28 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Freelance Recruitment Specialist',
-    template: '%s | Freelance Recruitment Specialist',
+    default: "Freelance Recruitment Specialist",
+    template: "%s | Freelance Recruitment Specialist",
   },
-  description: 'Freelance Recruitment Specialist',
-}
+  description: "Freelance Recruitment Specialist",
+};
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: LayoutProps<"/">) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col px-6">
-       <Theme>
-         <Box className='max-w-360 m-auto '>
-        <NavbarSection/>
-          {children}
-        </Box>
+      <body className="min-h-full flex flex-col">
+        <Theme>
+          {/* Full width navbar */}
+          <NavbarSection />
+          <Box className="w-full max-w-360 mx-auto px-6 pt-22">
+            {children}
+          </Box>
+
         </Theme>
       </body>
     </html>

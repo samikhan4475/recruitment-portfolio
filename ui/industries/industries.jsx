@@ -26,7 +26,7 @@ const Industries = () => {
         lg: "3",
       }} gap={{initial:'4',xs:'4',sm:"6"}}>
         {industriesData.map((industry, index) => {
-          const isImage = industry.icon.startsWith('http')
+          const Icon = industry.icon
 
           return (
             <Flex
@@ -41,15 +41,7 @@ const Industries = () => {
                   justify="center"
                   className="h-12 w-12 shrink-0 rounded-full bg-[#1e2761] text-white"
                 >
-                  {isImage ? (
-                    <img
-                      src={industry.icon}
-                      alt={industry.title}
-                      className="h-6 w-6 object-contain"
-                    />
-                  ) : (
-                    <span>{industry.icon}</span>
-                  )}
+                 <Icon/>
                 </Flex>
 
                 <Text className="text-[#1e2761] text-[16.6667px] font-bold">
